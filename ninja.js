@@ -18,7 +18,25 @@ class Ninja {
         this.health += 10;
     }
 }
+class Sensei extends Ninja{
+    constructor(name) {
+        super(name, 200);
+        this.wisdom = 10;
+        this.speed = 10;
+        this.strength = 10;
+    }
+    speakWisdom() {
+        super.drinkSake();
+        console.log( "The past is history, the future is a mystery, but today is a gift, that is why they call it the present");
+        
+    }
+}
 const ninja1 = new Ninja("Tanjiro", 100);
-console.log(ninja1)
+// console.log(ninja1)
 
-
+const superSensei = new Sensei("Oogway", 200);
+// console.log(superSensei);
+superSensei.showStats();
+// superSensei.drinkSake();
+superSensei.speakWisdom();
+superSensei.showStats();
